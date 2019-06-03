@@ -1,0 +1,9 @@
+<h2>Car Edit</h2>
+<input type="text" placeholder="brand" #brand value="{{selectedCar?.brand}}">
+  <input type="text" placeholder="model" #model value="{{selectedCar?.model}}" >
+    <input type="text" placeholder="price" #price value="{{selectedCar?.price}}">
+      <input type="text" placeholder="shortD"   #shortD value="{{selectedCar?.shortDescription}}" >
+      {{selectedCar|json}}
+
+
+<button (click)="updateCar(brand.value,model.value,price.value,shortD.value)" [routerLink]="['/']">submit</button>

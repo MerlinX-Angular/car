@@ -1,0 +1,18 @@
+<div *ngFor=" let car of cars | async">
+  <button (click)="deleteC(car.id)">Delete</button>
+  <button [routerLink]="['/edit/', +car.id]">Edit</button>
+<div [ngClass]="darkMode ? 'backgroundDark' : 'backgroundWhite'">  {{car.brand}} {{car.model}} </div>
+</div>
+
+FFFFFFFFFFFF
+<form>
+  <input type="text" placeholder="brand" #brand  required>
+    <input type="text" placeholder="model" #model required>
+      <input type="text" placeholder="price" #price required>
+        <input type="text" placeholder="shortD" #shortD required>
+</form>
+<button type="submit" (click)="postNew(brand.value,model.value,price.value,shortD.value)">Submit</button>
+
+
+<app-report></app-report>
+<button (click)="slider()">Change color</button>
